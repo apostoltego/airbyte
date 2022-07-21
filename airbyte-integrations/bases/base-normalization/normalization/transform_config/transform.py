@@ -299,7 +299,7 @@ class TransformConfig:
         # https://docs.getdbt.com/reference/warehouse-profiles/clickhouse-profile
         dbt_config = {
             "type": "clickhouse",
-            "driver": "clickhouse-connect ",
+            "driver": "clickhouse-connect",
             "host": config["host"],
             "port": config["port"],
             "schema": config["database"],
