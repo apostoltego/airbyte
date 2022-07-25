@@ -130,7 +130,7 @@ public class ClickhouseDestinationStrictEncryptAcceptanceTest extends Destinatio
   }
 
   private static JdbcDatabase getDatabase(final JsonNode config) {
-    final String jdbcStr = String.format("jdbc:clickhouse://%s:%s/%s?ssl=true&sslmode=none",
+    final String jdbcStr = String.format("jdbc:clickhouse://%s:%s/%s?ssl=true&sslmode=NONE",
         config.get(JdbcUtils.HOST_KEY).asText(),
         config.get(JdbcUtils.PORT_KEY).asText(),
         config.get(JdbcUtils.DATABASE_KEY).asText());

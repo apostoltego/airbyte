@@ -32,7 +32,7 @@ public class ClickhouseDestination extends AbstractJdbcDestination implements De
   static final Map<String, String> SSL_JDBC_PARAMETERS = ImmutableMap.of(
       "socket_timeout", "3000000",
       JdbcUtils.SSL_KEY, "true",
-      "sslmode", "none");
+      "sslmode", "NONE");
 
   public static Destination sshWrappedDestination() {
     return new SshWrappedDestination(new ClickhouseDestination(), JdbcUtils.HOST_LIST_KEY, JdbcUtils.PORT_LIST_KEY);
